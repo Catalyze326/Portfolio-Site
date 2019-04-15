@@ -3,13 +3,15 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
+html,body {
+    /* font-family: sans-serif; */
+    /* height: 100%; */
     margin: 0;
     padding: 0;
     background-color: #333;
-    overflow: hidden;
+}
+.home{
+overflow: hidden;
 }
 
 canvas {
@@ -21,7 +23,16 @@ canvas {
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
 
-.fa {
+.fa{
+    position: relative;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.fab{
     position: relative;
     display: table-cell;
     width: 60px;
@@ -34,17 +45,17 @@ canvas {
 
 .main-menu:hover,
 nav.main-menu.expanded {
-    width: 250px;
+    width: 200px;
     overflow: visible;
 }
 
 .main-menu {
     background: #212121;
     border-right: 1px solid #B40000;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
-    height: 100%;
+    /* height: 100%; */
     left: 0;
     width: 60px;
     overflow: hidden;
@@ -55,14 +66,17 @@ nav.main-menu.expanded {
 }
 
 .main-menu>ul {
+    position: relative;
+    top: 38%;
     margin: 7px 0;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 .main-menu li {
+    line-height: 5rem;
     position: relative;
     display: block;
-    width: 250px;
+    width: 200px;
 }
 
 .main-menu li>a {
@@ -71,7 +85,7 @@ nav.main-menu.expanded {
     border-collapse: collapse;
     border-spacing: 0;
     color: #999;
-    font-family: arial;
+    /* font-family: arial; */
     font-size: 16px;
     text-decoration: none;
     -webkit-transform: translateZ(0) scale(1, 1);
@@ -94,22 +108,12 @@ nav.main-menu.expanded {
     position: relative;
     display: table-cell;
     vertical-align: middle;
-    width: 190px;
+    text-align: center;
+    width: 160px;
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
 }
-
-.main-menu>ul.logout {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.no-touch .scrollable.hover {
-    overflow-y: hidden;
-}
-
-.no-touch .scrollable.hover:hover {
+hover:hover {
     overflow-y: auto;
     overflow: visible;
 }
@@ -155,7 +159,7 @@ nav.main-menu li.active>a,
 }
 
 @font-face {
-    font-family: 'Titillium Web';
+    font-family: 'Titillium Web', sans-serif;
     font-style: normal;
     font-weight: 300;
     src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
@@ -190,4 +194,97 @@ p {
     border: 2px solid #fff;
     border-radius: 30px;
     transition: .5s ease all;
+    background: transparent;
 }
+.btn-rounded:hover{
+    display: inline-block;
+    color: #fff;
+    padding: 8px 25px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    transition: .5s ease all;
+    background:transparent;
+    opacity: .3;
+}
+.about {
+    position: relative;
+    /* top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    color: white;
+    text-align: center;
+}
+/* .left{
+    position: relative;
+    left: -40%;
+} */
+
+
+.heading{
+    position: relative;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 100;
+    margin: 0 0 30px 0;
+}
+
+.work-wrapper {
+    position: relative;
+}
+
+.work-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    left: -51px;
+    width: 2px;
+    background: #ccc;
+}
+
+.work-wrapper .work {
+    position: relative;
+}
+
+.work-wrapper .work:after {
+    content: '';
+    position: relative;
+    top: 8px;
+    left: -58px;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 0 0 8px rgba(255, 171, 0, .4);
+    background: #FFAB00;
+}
+.section {
+    padding: 30% 0 50px;
+}
+
+.section .heading {
+    margin-bottom: 60px;
+}
+
+.section .heading:before {
+    content: '';
+    height: 10px;
+    width: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: block;
+    background: #FFA804;
+}
+
+.margin-t-10{ margin-top: 10px; }
+
+.margin-b-30{ margin-bottom: 30px; }
+.margin-b-50{ margin-bottom: 50px; }
+
+.margin-tb-15{ margin-top: 15px; margin-bottom: 30px; }
+
+.font-yellow{ color: #FFA600; }
+
+.font-semi-white{ color: #ddd; }
+
+.font-lite-black{ color: #999; }
