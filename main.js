@@ -262,7 +262,9 @@ goMovie();
 navigator.getBattery().then(function (battery) {
     if (battery.charging && battery.chargingTime === 0) {
         goMovie(180);        
-    } else {
+    } else if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+        goMovie(60);
+    }else{
         goMovie(120);
     }
 });

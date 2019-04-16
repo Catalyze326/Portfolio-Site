@@ -1,3 +1,5 @@
+
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -49,6 +51,18 @@ nav.main-menu.expanded {
     overflow: visible;
 }
 
+@media (max-width: 768px) {
+    .main-menu {
+        display: none;
+    }
+    .html,body{
+        height: 100%;
+    }
+    .header {
+        background-color: #333;
+        height: 70px;
+    }
+}
 .main-menu {
     background: #212121;
     border-right: 1px solid #B40000;
@@ -64,7 +78,6 @@ nav.main-menu.expanded {
     -webkit-transform: translateZ(0) scale(1, 1);
     z-index: 1000;
 }
-
 .main-menu>ul {
     position: relative;
     top: 38%;
@@ -208,16 +221,9 @@ p {
 }
 .about {
     position: relative;
-    /* top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     color: white;
     text-align: center;
 }
-/* .left{
-    position: relative;
-    left: -40%;
-} */
 
 
 .heading{

@@ -261,7 +261,7 @@ function goMovie(numBalls) {
 goMovie();
 navigator.getBattery().then(function (battery) {
     if (battery.charging && battery.chargingTime === 0) {
-        goMovie(350);
+        goMovie(300);
     } else {
         goMovie(200);
     }
