@@ -43,7 +43,7 @@ function getRandomSpeed(pos) {
     navigator.getBattery().then(function (battery) {
         if (battery.charging && battery.chargingTime === 0) {
             var min = -.1,
-            max = .1;
+                max = .1;
         } else {
             var min = -.4,
                 max = .4;
@@ -261,8 +261,8 @@ function goMovie(numBalls) {
 goMovie();
 navigator.getBattery().then(function (battery) {
     if (battery.charging && battery.chargingTime === 0) {
-        goMovie(180);        
+        goMovie(350);
     } else {
-        goMovie(120);
+        goMovie(200);
     }
 });

@@ -288,3 +288,16 @@ p {
 .font-semi-white{ color: #ddd; }
 
 .font-lite-black{ color: #999; }
+
+.myVersion{
+    top: 30%;
+    display: inline-block;
+    color: #fff;
+    padding: 8px 25px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    transition: .5s ease all;
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
