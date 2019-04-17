@@ -245,7 +245,7 @@ p {
     bottom: 0;
     left: -51px;
     width: 2px;
-    background: #ccc;
+    background: #B40000;
 }
 
 .work-wrapper .work {
@@ -262,7 +262,6 @@ p {
     border-radius: 10px;
     z-index: 1;
     box-shadow: 0 0 0 8px rgba(255, 171, 0, .4);
-    background: #FFAB00;
 }
 .section {
     padding: 30% 0 50px;
@@ -272,16 +271,6 @@ p {
     margin-bottom: 60px;
 }
 
-.section .heading:before {
-    content: '';
-    height: 10px;
-    width: 50px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    display: block;
-    background: #FFA804;
-}
-
 .margin-t-10{ margin-top: 10px; }
 
 .margin-b-30{ margin-bottom: 30px; }
@@ -289,7 +278,9 @@ p {
 
 .margin-tb-15{ margin-top: 15px; margin-bottom: 30px; }
 
-.font-yellow{ color: #FFA600; }
+.font-yellow {
+    color: #B40000;
+}
 
 .font-semi-white{ color: #ddd; }
 

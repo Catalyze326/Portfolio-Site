@@ -258,13 +258,36 @@ function goMovie(numBalls) {
     // initBalls(window.screen.height / 7);
     window.requestAnimationFrame(render);
 }
-goMovie();
 navigator.getBattery().then(function (battery) {
     if (battery.charging && battery.chargingTime === 0) {
         goMovie(180);        
     } else if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
-        goMovie(60);
+        goMovie(40);
     }else{
         goMovie(120);
     }
+});
+
+// Mouse effect
+canvas.addEventListener('mouseenter', function () {
+    console.log('mouseenter');
+    mouse_in = true;
+    balls.push(mouse_ball);
+});
+canvas.addEventListener('mouseleave', function () {
+    console.log('mouseleave');
+    mouse_in = false;
+    var new_balls = [];
+    Array.prototype.forEach.call(balls, function (b) {
+        if (!b.hasOwnProperty('type')) {
+            new_balls.push(b);
+        }
+    });
+    balls = new_balls.slice(0);
+});
+canvas.addEventListener('mousemove', function (e) {
+    var e = e || window.event;
+    mouse_ball.x = e.pageX;
+    mouse_ball.y = e.pageY;
+    // console.log(mouse_ball);
 });
