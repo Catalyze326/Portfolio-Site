@@ -259,10 +259,10 @@ function goMovie(numBalls) {
     window.requestAnimationFrame(render);
 }
 navigator.getBattery().then(function (battery) {
-    if (battery.charging && battery.chargingTime === 0) {
+    if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+        goMovie(60);
+    }else if (battery.charging && battery.chargingTime === 0) {
         goMovie(180);        
-    } else if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
-        goMovie(40);
     }else{
         goMovie(120);
     }
