@@ -42,8 +42,8 @@ var ball = {
 function getRandomSpeed(pos) {
     navigator.getBattery().then(function (battery) {
         if (battery.charging && battery.chargingTime === 0) {
-            var min = -.1,
-            max = .1;
+            var min = -.15,
+            max = .15;
         } else {
             var min = -.4,
                 max = .4;
@@ -182,7 +182,7 @@ function renderLines() {
             if (fraction < 1) {
                 alpha = (1 - fraction).toString();
 
-                ctx.strokeStyle = 'rgba(230,0,0,' + alpha + ')';
+                ctx.strokeStyle = 'rgba(0,255,0,' + alpha + ')';
                 ctx.lineWidth = link_line_width;
 
                 ctx.beginPath();
@@ -205,9 +205,12 @@ function getDisOf(b1, b2) {
 
 // add balls if there a little balls
 function addBallIfy() {
-    if (balls.length < 20) {
-        balls.push(getRandomBall());
+    if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+        if (balls.length < 25) {
+            balls.push(getRandomBall());
+        }   
     }
+
 }
 
 // Render
