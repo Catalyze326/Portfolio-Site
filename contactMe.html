@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Me</title>
-    <link rel="shortcut icon" href="files/code.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="files/SS.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script type="text/javascript">
+        var is_chrome = (typeof window.chrome === "object" && navigator.appVersion.indexOf('Edge') === -1);
+        if (is_chrome) {
+            document.write("<link type=\"text/css\" rel=\"stylesheet\" href=\"css/chrome.css\">");
+        } else {
+            document.write("<link type=\"text/css\" rel=\"stylesheet\" href=\"css/nonChrome.css\">");
+        }
+    </script>
 </head>
 <html>
     <body>
@@ -32,10 +40,10 @@
             <h1>Contact Me</h1>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <h4> Email:<temp style="color:#fff">CalebMorton@SomewhatAdequiteDeveloper.com</temp></h4>
-                <h4> Cell:<temp style="color:#fff">443-537-0075</temp></h4>
-                <h4> LinkedIn:<temp style="color:#fff">https://www.linkedin.com/in/caleb-f-morton/</temp></h4>
-                <h4> GitHub:<temp style="color:#fff">https://github.com/Catalyze326</temp></h4>
+                <h4> Email:<temp class="container" style="color:#fff"> CalebMorton@SomewhatAdequiteDeveloper.com</temp></h4>
+                <h4> Cell:<temp style="color:#fff"> 443-537-0075</temp></h4>
+                <h4> LinkedIn:<temp style="color:#fff"> https://www.linkedin.com/in/caleb-f-morton/</temp></h4>
+                <h4> GitHub:<temp style="color:#fff"> https://github.com/Catalyze326</temp></h4>
             </div>
         </div>
         <nav class="main-menu">
