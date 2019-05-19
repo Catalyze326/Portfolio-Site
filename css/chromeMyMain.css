@@ -4,3 +4,6 @@ body:nth-of-type(1), canvas {
 html, body {
     background-color: #000000;
 }
+p{
+    max-width: 100%;
+}
