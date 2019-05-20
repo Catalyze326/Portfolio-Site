@@ -6,22 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SmokeSignals</title>
-    <link rel="shortcut icon" href="files/wifi.png" type="image/x-icon" />
+    <title>Smoke Signals</title>
+    <link rel="shortcut icon" href="files/WiFiCropped.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="description"
         content="A peer to peer social media platform that does not need any internet access and is impossible to censor" />
+    <script type="text/javascript">
+        var is_chrome = (typeof window.chrome === "object" && navigator.appVersion.indexOf('Edge') === -1);
+        if (is_chrome) {
+            document.write('<link type=\"text/css\" rel=\"stylesheet\" href=\"css/chromeMain.css\">>');
+        }
+    </script>
     <!-- First thank you. If you are trying to duplacate the cool background it is in the main.js file.
-    Secondly If you find the easter egg enjoy it -->
+        Secondly If you find the easter egg enjoy it -->
 </head>
 <html>
 <header class="showcase">
 
-    <body class="top-icons">
+    <body class="home">
         <div class="top-icons">
             <a href="/">
                 <i class="fa fa-home fa-2x" style="color:#fff;"></i>
@@ -36,44 +41,52 @@
                 <i class="fas fa-calendar-alt fa-2x" style="color:#fff;"></i>
             </a>
         </div>
+        <canvas id="nokey" width="800" height="800">
+        </canvas>
+        <script type="text/javascript" src="main.js"></script>
         <div class="title">
-            <h1>Smoke Signals</h1>
+            <small>
+                <h1>Smoke Signals</h1>
+            </small>
             <p>A completely uncensored peer to peer social media platform requiring no internet access</p>
         </div>
+
         <nav class="main-menu">
             <ul>
-                <li class="has-subnav">
-                    <a href="/">
-                        <i class="fa fa-home fa-2x"></i>
-                        <span class="nav-text">
-                            Home
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="about">
-                        <i class="fa fa-list fa-2x"></i>
-                        <span class="nav-text">
-                            About
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="contact">
-                        <i class="far fa-id-card fa-2x"></i>
-                        <span class="nav-text">
-                            Contact
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="timeline">
-                        <i class="fas fa-calendar-alt fa-2x"></i>
-                        <span class="nav-text">
-                            Timeline
-                        </span>
-                    </a>
-                </li>
+                <ul>
+                    <li class="has-subnav">
+                        <a href="/">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about">
+                            <i class="fa fa-list fa-2x"></i>
+                            <span class="nav-text">
+                                About
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact">
+                            <i class="far fa-id-card fa-2x"></i>
+                            <span class="nav-text">
+                                Contact
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="timeline">
+                            <i class="fas fa-calendar-alt fa-2x"></i>
+                            <span class="nav-text">
+                                Timeline
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </ul>
         </nav>
         <div class="title" style="top:0%">
